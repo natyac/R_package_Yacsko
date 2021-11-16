@@ -58,41 +58,62 @@ ggplot(phenology, aes(x= Year, y= AnnualTemp))+geom_point(size=0.5)+geom_smooth(
 
 ## Let's take a look at the actual butterflies.
 
-4) If butterflies emerge based on temperature, what would we expect to be the relationship between Spring temperature and day of emergence? Summer temperature and day of emergence? Year and day? Test all three out below. Which predictor (day, spring temp, summer temp) you think is most relevant? (10 points)
+4) If butterflies emerge based on temperature, what would we expect to be the relationship between Spring temperature and day of emergence? Summer temperature and day of emergence? Year and day? Test all three out below. Which predictor (day, spring temp, summer temp) you think is most relevant? 
+
+```
+I believe that the summer temperature will be the most relevant predictor between the three, based on the information included in Table 1 in "Flowering time..." which includes summer temperatures as the best predictor.
+```
 
 ```{r, eval=FALSE}
-#Code
+ggplot(butterflies, aes(x=SpringTemp, y=Day))+geom_point(size=0.5)
+ggplot(butterflies, aes(x=SummerTemp, y=Day))+geom_point(size=0.5)
+ggplot(butterflies, aes(x=Year, y=Day))+geom_point(size=0.5)
 ```
 
 5) Is there a significant linear relationship between any predictors and the response? (10 pts)
 
-```{r}
-# code here
+```
+From the plots below, I do not see a significant linear relationship. Though, both spring and summer temperatures show subtle negative linearity with the smallest range of error in the spring temperature model.
 ```
 
-```
-#Answer here
+```{r}
+lmSpring <- ggplot(butterflies, aes(x=SpringTemp, y=Day))+geom_point(size=0.5) + geom_smooth(method="lm")
+lmSpring
+lmSummer <- ggplot(butterflies, aes(x=SummerTemp, y=Day))+geom_point(size=0.5) + geom_smooth(method="lm")
+lmSummer
+lmDay <- ggplot(butterflies, aes(x=Year, y=Day))+geom_point(size=0.5) + geom_smooth(method="lm")
+lmDay
 ```
 
 6) It looks like different animals might have different relationships to the predictor variables. Try plotting them out as a facets (5 pts).
 
 
 ```{r, eval=FALSE}
-#Code
+speciesSummer <- ggplot(butterflies, aes(x=SummerTemp, y=Day))+ geom_point(size=0.5)+ geom_smooth(method="lm") + facet_wrap(facets=vars(ButterflySpecies))
+speciesSummer
+speciesSpring <- ggplot(butterflies, aes(x=SpringTemp, y=Day))+ geom_point(size=0.5)+ geom_smooth(method="lm") + facet_wrap(facets=vars(ButterflySpecies))
+speciesSpring
 ```
 
 7) Join our two datasets together and remake the facet plot above. Does this change your opinion of the relatedness of variables? (5 pts)
 
+```
+I see a similar relationship to temperature after combining the data sets, which did not change how I saw the relationship between the variables.
+```
+
 
 ```{r}
-#Code
+butterfliesjoined <-butterflies %>% 
+  inner_join(butterflies)
+ggplot(butterfliesjoined, aes(x=SummerTemp, y=Day)) + geom_point(size=0.5)+ geom_smooth(method="lm") + facet_wrap(facets= vars(ButterflySpecies))
+ggplot(butterfliesjoined, aes(x=SpringTemp, y=Day)) + geom_point(size=0.5)+ geom_smooth(method="lm") + facet_wrap(facets= vars(ButterflySpecies))
 ```
 
 8) Wrap up: What is the relationship between temperature (remember that we looked at 3 kinds of temperature) and day of emergence? Is it the same for all species? How does this relate back to Kharouba and Vellend's hypotheses? (10 pts)
 
 
-```{r}
-#Answer here.
+```
+The relationship between the summer, spring, and yearly temperatures are not noticeably significant. When graphed separately, the temperature and day of emergence varies between each species but still lacks a significant linear relationship. We see the weakest relationship in the summer and strongest in the spring. This relates to Kharouba and Vellend's hypotheses that the emergence of butterflies correlates to factors separate from plant phenology, such as temperature.
 ```
 
 # Part Two. 30 points.
