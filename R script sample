@@ -1,0 +1,39 @@
+Notes:
+
+11-16-2021
+
+In class sample mult function:
+
+
+Original code:
+
+mult <- function (x,y){
+  product <- x*y
+  return(product)
+}
+
+
+->
+
+With numeric check:
+
+mult <- function (x,y){
+   product <- x*y
+   is.numeric(product)
+    return(product)
+}
+
+
+->
+
+Error message for non-numeric values added:
+
+mult <- function (x,y){
+    product <- x*y
+    if (is.numeric==FALSE{
+        return("ERROR- non-numeric")
+    }
+    return(product)
+}
+
+Try to add justwhybother.
