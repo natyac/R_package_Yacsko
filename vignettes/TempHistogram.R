@@ -15,4 +15,4 @@ AntHistory <- function(Ants, min_ma){
 Histo <- ggplot(Ants, mapping=aes(x=min_ma))+
   geom_histogram()
 return(Histo)
-  }
+}
