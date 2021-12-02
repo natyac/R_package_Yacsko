@@ -12,8 +12,7 @@ AntHistory(Ants, min_ma)
 \item{min_ma}{is the variable column being graphed}
 }
 \value{
-a histogram showing how many ants lived at each minimum age that they
-could have been alive.
+a histogram showing how many ants lived at each minimum age that they could have been alive.
 }
 \description{
 Makes a histogram based on the min_ma

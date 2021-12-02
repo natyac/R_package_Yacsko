@@ -4,7 +4,6 @@
 #' @param Ants is the data set Ants.csv
 #' @param ColumnGenus is the genus of the Ants
 #' @return GenusCount The count of ants for each genus
-#' @usage AntsIn(Ants)
 
 avg <- function (Ants,ColumnGenus){
   if (!is.data.frame(Ants)){

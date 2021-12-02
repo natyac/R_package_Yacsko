@@ -49,7 +49,7 @@ download.file(url = "https://raw.githubusercontent.com/Paleantology/GBIO153H/mas
 
 ```{r}
 library(project)
-result <- mult(4,5)
+result <- avg(Ants = result, ColumnGenus = Myrmecia)
 ```
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.

@@ -6,7 +6,7 @@
 Input: splitting min and max values into averages.
 Output: column of averages for each taxon}
 \usage{
-AntsIn(Ants)
+avg(Ants, ColumnGenus)
 }
 \arguments{
 \item{Ants}{is the data set Ants.csv}
