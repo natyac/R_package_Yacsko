@@ -5,8 +5,7 @@
 #' Remove NA values from a data set.
 #' @param input_value data with NA values
 #' @return output_value
-#' @usage
-#' cleanup(data)
+#' @usage cleanup(data)
 
 cleanup <- function (inputs){
   nonNADataFrame <- read_csv(SixLegs, na = c("None", "NA"))
