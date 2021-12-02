@@ -1,7 +1,7 @@
 #' Multiply together two numbers
 #' 
-#' @params x A number
-#' @params y Another number
+#' @param x A number
+#' @param y Another number
 #' @return product The product of multiplying x and y
 #' @usage
 #' mult(4, 5)

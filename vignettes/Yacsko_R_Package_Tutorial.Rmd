@@ -33,7 +33,7 @@ devtools::install_github("natyac/R_Package_Yacsko")
 (Final part- downloading data for our R package)
 
 ```{r}
-download.file()
+download.file(url = "https://raw.githubusercontent.com/Paleantology/GBIO153H/master/data/Phenology_data.csv", destfile = "/cloud/project/data/Phenology_data.csv")
 ```
 
 (Now we start the actual tutorial)
@@ -48,6 +48,7 @@ download.file()
 (Ex:)
 
 ```{r}
+library(project)
 result <- mult(4,5)
 ```
 

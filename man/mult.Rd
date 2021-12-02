@@ -6,6 +6,11 @@
 \usage{
 mult(4, 5)
 }
+\arguments{
+\item{x}{A number}
+
+\item{y}{Another number}
+}
 \value{
 product The product of multiplying x and y
 }

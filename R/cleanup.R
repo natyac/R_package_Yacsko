@@ -1,11 +1,9 @@
-#First R script.
-#Input: removes NA values
-#Output: a data set free of missing values
-
+#' First R script.
+#' Input: removes NA values
+#' Output: a data set free of missing values
 
 #' Remove NA values from a data set.
-#'
-#' @params input_value
+#' @param input_value data with NA values
 #' @return output_value
 #' @usage
 #' cleanup(data)
@@ -18,3 +16,4 @@ cleanup <- function (inputs){
   }
   return(nonNADataFrame)
 }
+

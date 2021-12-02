@@ -1,8 +1,8 @@
-#3rd R command.
-#Input: splitting min and max values into averages.
-#Output: column of averages for each taxon
-#' @params Ants is the data set Ants.csv
-#' @params ColumnGenus is the genus of the Ants
+#' 3rd R command.
+#' Input: splitting min and max values into averages.
+#' Output: column of averages for each taxon
+#' @param Ants is the data set Ants.csv
+#' @param ColumnGenus is the genus of the Ants
 #' @return GenusCount The count of ants for each genus
 #' @usage
 #' AntsIn(Ants)
