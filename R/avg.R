@@ -4,7 +4,7 @@
 #' @param Ants is the data set Ants.csv
 #' @param ColumnGenus is the genus of the Ants
 #' @return GenusCount The count of ants for each genus
-
+#' @export
 avg <- function (Ants,ColumnGenus){
   if (!is.data.frame(Ants)){
     return("Error in data formation")
