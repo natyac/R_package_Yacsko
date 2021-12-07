@@ -6,7 +6,7 @@
 #' @param input_value data with NA values
 #' @return output_value
 #' @usage cleanup(data)
-
+#' @export
 cleanup <- function (inputs){
   nonNADataFrame <- read_csv(SixLegs, na = c("None", "NA"))
   nonNADataFrame <-na.omit(nonNADataFrame)
