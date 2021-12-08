@@ -3,21 +3,22 @@
 \name{cleanup}
 \alias{cleanup}
 \title{First R script.
-Input: removes NA values
-Output: a data set free of missing values
+Input: Data set with NA values and missing data to be read.
+Output: Data set free of NA values with converted missing values to NA.
 Remove NA values from a data set.}
 \usage{
 cleanup(data)
 }
 \arguments{
-\item{input_value}{data with NA values}
+\item{SixLegs}{data with NA values but needs to be typed as
+"/cloud/projects/data/FossilAnts.csv"}
 }
 \value{
 output_value
 }
 \description{
 First R script.
-Input: removes NA values
-Output: a data set free of missing values
+Input: Data set with NA values and missing data to be read.
+Output: Data set free of NA values with converted missing values to NA.
 Remove NA values from a data set.
 }

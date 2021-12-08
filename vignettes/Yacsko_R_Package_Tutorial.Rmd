@@ -30,7 +30,6 @@ library(readr)
 ```{r}
 download.file(url = "https://raw.githubusercontent.com/BiologicalDataAnalysis2019/2021/main/projects/project_one/data/FossilAnts.csv", destfile = "FossilAnts.csv")
 Ants<-read_csv("/cloud/project/vignettes/FossilAnts.csv")
-View(Ants)
 ```
 
 (Now we start the actual tutorial)
@@ -47,7 +46,9 @@ View(Ants)
 ```{r}
 library(projectY)
 TypesOfAnts <- AntsIn(Ants, Genus)
-view(TypesOfAnts)
+```
+
+```{r eval=FALSE, include=FALSE}
 # We used this function because we wanted to see how many different genera were represented in the experiment/data frame.
 # We expect a list of genera to appear in one column, and a count of every time a genera to be in one column, and a count of every time a genera was listed in the Genus column of our original Ants data frame.
 NAbegone <- cleanup("/cloud/project/R/Ants.csv")
@@ -72,7 +73,7 @@ summary(TypesOfAnts)
 
 You can also embed plots, for example:
 
-```{r AntGraph, echo=FALSE}
+```{r AntGraph, eval=FALSE, include=FALSE}
 plot(AntGraph)
 ```
 

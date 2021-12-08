@@ -8,16 +8,12 @@
 #' @return output_value
 #' @usage cleanup(data)
 #' @export
-<<<<<<< HEAD
 
-ByeByeNA <- function (SixLegs){
-=======
-cleanup <- function (inputs){
->>>>>>> 216aa4903f23de9cc34801caaeec8bb43cdfee2b
-  nonNADataFrame <- read_csv(SixLegs, na = c("None", "NA"))
-  nonNADataFrame <-na.omit(nonNADataFrame)
-  if (any(is.na(nonNADataFrame)) == TRUE){
-    return("Error in data formation")
-  }
-  return(nonNADataFrame)
-}
+    cleanup <- function (SixLegs){
+      nonNADataFrame <- read_csv(SixLegs, na = c("None", "NA"))
+      nonNADataFrame <-na.omit(nonNADataFrame)
+      if (any(is.na(nonNADataFrame)) == TRUE){
+        return("Error in data formation")
+      }
+      return(nonNADataFrame)
+    }
