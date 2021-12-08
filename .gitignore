@@ -5,3 +5,6 @@
 project.Rcheck/
 project*.tar.gz
 project*.tgz
+projectY.Rcheck/
+projectY*.tar.gz
+projectY*.tgz

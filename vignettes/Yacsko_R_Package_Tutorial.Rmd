@@ -1,6 +1,6 @@
 ---
-title: "Yacsko R Package"
-author: "Natasha Yacsko"
+title: "Yacsko/LaPeyronnie R Package"
+author: "Natasha Yacsko and Adrian LaPeyronnie"
 date: "12/2/2021"
 output: html_document
 ---
@@ -16,24 +16,21 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 library(ggplot2)
 library(tidyverse)
-```
-
-(If you need to install packages not previously used in class, ex: genomics)
-
-```{r}
-install.packages("vcfr")
+library(readr)
 ```
 
 (Now, we install our own R package)
 
 ```{r}
-devtools::install_github("natyac/R_Package_Yacsko")
+#devtools::install_github("natyac/R_Package_Yacsko")
 ```
 
 (Final part- downloading data for our R package)
 
 ```{r}
-download.file(url = "https://raw.githubusercontent.com/Paleantology/GBIO153H/master/data/Phenology_data.csv", destfile = "/cloud/project/data/Phenology_data.csv")
+download.file(url = "https://raw.githubusercontent.com/BiologicalDataAnalysis2019/2021/main/projects/project_one/data/FossilAnts.csv", destfile = "FossilAnts.csv")
+Ants<-read_csv("/cloud/project/vignettes/FossilAnts.csv")
+View(Ants)
 ```
 
 (Now we start the actual tutorial)
@@ -48,24 +45,35 @@ download.file(url = "https://raw.githubusercontent.com/Paleantology/GBIO153H/mas
 (Ex:)
 
 ```{r}
-library(project)
-result <- avg(Ants = result, ColumnGenus = Myrmecia)
+library(projectY)
+TypesOfAnts <- AntsIn(Ants, Genus)
+view(TypesOfAnts)
+# We used this function because we wanted to see how many different genera were represented in the experiment/data frame.
+# We expect a list of genera to appear in one column, and a count of every time a genera to be in one column, and a count of every time a genera was listed in the Genus column of our original Ants data frame.
+NAbegone <- cleanup("/cloud/project/R/Ants.csv")
+view(NAbegone)
+# This function was used to regenerate the original Ants free of NA and empty data values.
+# This function should have outputted a new data frame free of NA-like values.
+AntGraph <- AntHistory(Ants, min_ma)
+AntGraph
+# We wanted a graph to show us the era based on the minimum age when each ant was alive and what era had the most ants living in it.
+# The expected output is a histogram that groups each ant by minimum age with a count of each ant/era. 
 ```
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
-summary(cars)
+```{r TypesOfAnts}
+summary(TypesOfAnts)
 ```
 
 ## Including Plots
 
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r AntGraph, echo=FALSE}
+plot(AntGraph)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

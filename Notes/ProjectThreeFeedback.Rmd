@@ -1,0 +1,5 @@
+
+    Write the code for each of your functions: Code looks good and works
+    Document them (Will cover this in class week of Nov. 15): Documentation looks good and compiles.
+    One test per function (Will cover this week of Nov. 15): Tests adequate
+    Add, commit, and push files to GitHub: Looks like it was added, committed and pushed on time.
