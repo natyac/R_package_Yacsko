@@ -1,7 +1,7 @@
 pandoc: 2.14.0.3
-pkgdown: 2.0.0
+pkgdown: 2.0.1
 pkgdown_sha: ~
 articles:
   Yacsko_R_Package_Tutorial: Yacsko_R_Package_Tutorial.html
-last_built: 2021-12-06T01:10Z
+last_built: 2021-12-09T16:37Z
 

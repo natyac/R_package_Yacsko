@@ -19,6 +19,11 @@ library(tidyverse)
 library(readr)
 ```
 
+
+```{r}
+install.packages("pkgdown")
+```
+
 (Now, we install our own R package)
 
 ```{r}

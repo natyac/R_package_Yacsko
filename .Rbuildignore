@@ -6,3 +6,6 @@
 ^projectY\.Rcheck$
 ^projectY.*\.tar\.gz$
 ^projectY.*\.tgz$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
